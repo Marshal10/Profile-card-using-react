@@ -22,7 +22,11 @@ function App() {
 }
 
 function Avatar() {
-  return <img src="images/profile.jpg" alt="profile_img"></img>;
+  return (
+    <div className="image-wrapper">
+      <img src="images/profile.jpg" alt="profile_img"></img>
+    </div>
+  );
 }
 
 function ProfileInfo() {
