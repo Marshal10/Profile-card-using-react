@@ -52,7 +52,7 @@ function SkillList() {
           <Skill name="HTML+CSS" color="#2257e6" level="💪" />
         </li>
         <li>
-          <Skill name="JavaScript" color="#ebd316" level="💪" />
+          <Skill name="JavaScript" color="#9d8b00" level="💪" />
         </li>
         <li>
           <Skill name="Web Design" color="#b8d7a2" level="👍" />
@@ -71,8 +71,7 @@ function SkillList() {
 function Skill(props) {
   return (
     <span style={{ backgroundColor: props.color }}>
-      {props.name}
-      {props.level}
+      {props.name} {props.level}
     </span>
   );
 }

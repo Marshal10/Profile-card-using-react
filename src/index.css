@@ -18,8 +18,9 @@ body {
 
 .card {
   background: #fff;
-  padding: 20px 32px;
+  padding: 24px 32px;
   border-radius: 12px;
+  max-width: 500px;
   min-height: 460px;
   display: grid;
   place-items: center;
@@ -71,4 +72,59 @@ body {
 .location svg {
   font-size: 27px;
   margin-right: 10px;
+}
+
+.skills {
+  margin-top: 35px;
+}
+
+.skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills ul li span {
+  font-weight: 700;
+  display: block;
+  color: black;
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.socials {
+  margin-top: 35px;
+  display: flex;
+  width: 60%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.socials svg {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.socials svg:hover {
+  transform: scale(1.4);
+}
+
+.socials svg.fa-github:hover {
+  color: #000000;
+}
+
+.socials svg.fa-instagram:hover {
+  color: #e56969;
+}
+
+.socials svg.fa-x-twitter:hover {
+  color: #000000;
+}
+
+.socials svg.fa-linkedin:hover {
+  color: #0077b5;
 }
