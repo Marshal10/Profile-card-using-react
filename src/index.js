@@ -7,6 +7,7 @@ function App() {
     <div className="card">
       <Avatar />
       <ProfileInfo />
+      <SkillList />
     </div>
   );
 }
@@ -24,6 +25,39 @@ function ProfileInfo() {
         📌<span className="location">Bengaluru,India</span>
       </p>
     </div>
+  );
+}
+
+function SkillList() {
+  return (
+    <div className="skills">
+      <ul>
+        <li>
+          <Skill name="HTML+CSS" color="#2257e6" level="💪" />
+        </li>
+        <li>
+          <Skill name="JavaScript" color="#ebd316" level="💪" />
+        </li>
+        <li>
+          <Skill name="Web Design" color="#b8d7a2" level="👍" />
+        </li>
+        <li>
+          <Skill name="Git and GitHub" color="#e4452c" level="👍" />
+        </li>
+        <li>
+          <Skill name="React" color="#52d5f7" level="👶" />
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function Skill(props) {
+  return (
+    <span style={{ backgroundColor: props.color }}>
+      {props.name}
+      {props.level}
+    </span>
   );
 }
 
