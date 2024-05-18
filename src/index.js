@@ -1,6 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faLinkedin,
+  faInstagram,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   return (
@@ -8,6 +16,7 @@ function App() {
       <Avatar />
       <ProfileInfo />
       <SkillList />
+      <Socials />
     </div>
   );
 }
@@ -22,7 +31,8 @@ function ProfileInfo() {
       <p className="name">Marshal Malean</p>
       <p className="work">Front-end developer from Bengaluru</p>
       <p>
-        📌<span className="location">Bengaluru,India</span>
+        <FontAwesomeIcon icon={faLocationDot} />
+        <span className="location">Bengaluru,India</span>
       </p>
     </div>
   );
@@ -58,6 +68,17 @@ function Skill(props) {
       {props.name}
       {props.level}
     </span>
+  );
+}
+
+function Socials() {
+  return (
+    <div className="socials">
+      <FontAwesomeIcon icon={faGithub} />
+      <FontAwesomeIcon icon={faInstagram} />
+      <FontAwesomeIcon icon={faXTwitter} />
+      <FontAwesomeIcon icon={faLinkedin} />
+    </div>
   );
 }
 
