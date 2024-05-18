@@ -33,8 +33,10 @@ function ProfileInfo() {
   return (
     <div className="info">
       <p className="name">Marshal Malean</p>
-      <p className="work">Front-end developer from Bengaluru</p>
-      <p>
+      <p className="work">
+        Front-end developer from <span>Bengaluru</span>
+      </p>
+      <p className="location">
         <FontAwesomeIcon icon={faLocationDot} />
         <span className="location">Bengaluru,India</span>
       </p>
