@@ -10,6 +10,39 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
+const skills = [
+  {
+    skill: "HTML+CSS",
+    level: "advanced",
+    color: "#2662EA",
+  },
+  {
+    skill: "JavaScript",
+    level: "advanced",
+    color: "#EFD81D",
+  },
+  {
+    skill: "Web Design",
+    level: "advanced",
+    color: "#C3DCAF",
+  },
+  {
+    skill: "Git and GitHub",
+    level: "intermediate",
+    color: "#E84F33",
+  },
+  {
+    skill: "React",
+    level: "advanced",
+    color: "#60DAFB",
+  },
+  {
+    skill: "Svelte",
+    level: "beginner",
+    color: "#FF3B00",
+  },
+];
+
 function App() {
   return (
     <div className="card">
@@ -24,7 +57,7 @@ function App() {
 function Avatar() {
   return (
     <div className="image-wrapper">
-      <img src="images/profile.jpg" alt="profile_img"></img>
+      <img src="images/profile.jpg" alt="Profile Picture"></img>
     </div>
   );
 }
@@ -48,21 +81,11 @@ function SkillList() {
   return (
     <div className="skills">
       <ul>
-        <li>
-          <Skill name="HTML+CSS" color="#2257e6" level="💪" />
-        </li>
-        <li>
-          <Skill name="JavaScript" color="#9d8b00" level="💪" />
-        </li>
-        <li>
-          <Skill name="Web Design" color="#b8d7a2" level="👍" />
-        </li>
-        <li>
-          <Skill name="Git and GitHub" color="#e4452c" level="👍" />
-        </li>
-        <li>
-          <Skill name="React" color="#52d5f7" level="👶" />
-        </li>
+        {skills.map((skill) => (
+          <li>
+            <Skill name={skill.skill} color={skill.color} level={skill.level} />
+          </li>
+        ))}
       </ul>
     </div>
   );
@@ -71,7 +94,10 @@ function SkillList() {
 function Skill(props) {
   return (
     <span style={{ backgroundColor: props.color }}>
-      {props.name} {props.level}
+      {props.name}
+      {props.level === "advanced" && "💪"}
+      {props.level === "intermediate" && "👍"}
+      {props.level === "beginner" && "👶"}
     </span>
   );
 }
